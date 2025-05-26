@@ -3,36 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crypto Tracker Dashboard</title>
+    <title>AI-Powered Resume Builder</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-     <button onclick="window.location.href='https://vasilisnikitaras.github.io/Vasilis-Projects-2025A/'">
+ <button onclick="window.location.href='https://vasilisnikitaras.github.io/Vasilis-Projects-2025A/'">
     Back to Home
 </button>
 
+    
     <header>
-        <h1>Crypto Tracker Dashboard</h1>
-        <p>Track real-time cryptocurrency prices</p>
+        <h1>AI-Powered Resume Builder</h1>
+        <p>Create a professional resume with AI assistance!</p>
     </header>
 
-    <section id="crypto-data">
-        <h2>Live Prices</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Cryptocurrency</th>
-                    <th>Price (USD)</th>
-                </tr>
-            </thead>
-            <tbody id="crypto-table">
-                <!-- Data will be inserted here dynamically -->
-            </tbody>
-        </table>
+    <section id="resume-form">
+        <h2>Enter Your Details</h2>
+        <input type="text" id="name" placeholder="Your Name">
+        <input type="email" id="email" placeholder="Your Email">
+        <textarea id="experience" placeholder="Your Work Experience"></textarea>
+        <button onclick="generateResume()">Generate Resume</button>
     </section>
 
-  <!-- Scroll-to-Top Button -->
+    <section id="resume-output">
+        <h2>Your AI-Generated Resume</h2>
+        <div id="resume-preview"></div>
+    </section>
+
+      <!-- Scroll-to-Top Button -->
     <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" class="scroll-top-btn">
         ⬆ Back to Top
     </button>
@@ -42,7 +41,6 @@
         <p>© 2025 Vasilis Nikitaras | All rights reserved.</p>
     </footer>
 
-    
     <script src="script.js"></script>
 </body>
 </html>
