@@ -1,19 +1,16 @@
-async function fetchCryptoPrices() {
-    try {
-        const response = await fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,cardano&vs_currencies=usd");
-        const data = await response.json();
+function generateResume() {
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const experience = document.getElementById("experience").value;
 
-        const cryptoTable = document.getElementById("crypto-table");
-        cryptoTable.innerHTML = `
-            <tr><td>Bitcoin</td><td>$${data.bitcoin.usd}</td></tr>
-            <tr><td>Ethereum</td><td>$${data.ethereum.usd}</td></tr>
-            <tr><td>Cardano</td><td>$${data.cardano.usd}</td></tr>
-        `;
-    } catch (error) {
-        console.error("Error fetching crypto prices:", error);
+    if (!name || !email || !experience) {
+        alert("Please fill in all fields!");
+        return;
     }
-}
 
-// Refresh data every 10 seconds
-setInterval(fetchCryptoPrices, 10000);
-fetchCryptoPrices();
+    document.getElementById("resume-preview").innerHTML = `
+        <h3>${name}</h3>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Experience:</strong> ${experience}</p>
+    `;
+}
